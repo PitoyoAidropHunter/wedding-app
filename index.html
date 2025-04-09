@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Imperial+Script&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div
+      id="page1"
+      class="bg-cover bg-center h-screen flex flex-col items-center"
+      style="background-image: url('images/gagas.jpg')"
+    >
+      <div class="absolute inset-0 bg-black/30"></div>
+      <div
+        class="flex flex-col justify-center items-center gap-3 text-white mt-[400px] lg:mt-[300px] mx-10 lg:mx-0"
+      >
+        <h1 class="text-5xl lg:text-8xl imperial-script-regular drop-shadow-xl">
+          Gagas & Someone
+        </h1>
+        <div
+          class="flex flex-col items-center gap-5 font-semibold drop-shadow-xl"
+        >
+          <p class="text-sm lg:text-xl cinzel font-semibold">
+            SEPECIAL IVITATION TO
+          </p>
+          <p
+            class="text-xs lg:text-md text-cente raleway font-semibold text-center"
+          >
+            tanpa mengurangi rasa hormat kami mengundang Bapak/Ibu/Saudara/i
+            untuk hadir di acara pernikahan kami.
+          </p>
+          <div>
+            <button
+              onclick="showNextPage('page1', 'page2')"
+              class="bg-white text-md py-2 px-5 rounded-full text-gray-800 hover:bg-gray-200 transition-all raleway font-bold ease-in-out duration-300"
+            >
+              BUKA UNDANGAN
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="page2" class="text-white" style="display: none">
+      <div
+        class="bg-cover bg-center h-screen flex flex-col items-center relative"
+        style="background-image: url('images/gagas.jpg')"
+      >
+        <div class="absolute inset-0 bg-black/40"></div>
+        <div class="flex justify-center w-full">
+          <div class="min-h-screen w-full mx-[40px] lg:mx-[80px] pt-4">
+            <div class="flex flex-col drop-shadow-xl w-full">
+              <div class="flex items-center">
+                <h1 class="raleway flex whitespace-nowrap text-xl mr-4">
+                  The Wedding Of
+                </h1>
+                <hr class="border-t border-white w-full" />
+              </div>
+            </div>
+            <div
+              class="absolute bottom-8 left-8 text-2xl mx-[20px] lg:mx-[50px]"
+            >
+              <div class="flex flex-col imperial-script-regular">
+                <h1 class="text-6xl">Gagas</h1>
+                <h1 class="text-6xl">& Someone</h1>
+              </div>
+              <div>
+                <p class="raleway text-sm mt-5">Minggu 6 Juli 2025</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        class="min-h-screen w-full bg-[#373A40] flex justify-center items-center"
+      >
+        <div class="mx-4 lg:mx-[270px] py-10">
+          <!-- Container with responsive flex direction -->
+          <div
+            class="flex flex-col lg:flex-row items-center justify-between gap-8"
+          >
+            <!-- Text container - will be on top in desktop, below in mobile -->
+            <div
+              class="w-full lg:w-1/2 text-center lg:text-left order-2 lg:order-1"
+            >
+              <h1 class="border-b pb-2 raleway text-md">Pengantin Pria</h1>
+              <div class="mt-5">
+                <h1 class="text-8xl imperial-script-regular">Gagas</h1>
+                <h1 class="text-8xl imperial-script-regular -mt-8">Cahya</h1>
+                <p class="raleway text-sm mt-5">Putra dari Bapak Gagas</p>
+                <p class="raleway text-sm">dan Ibu Cahya</p>
+              </div>
+            </div>
+            <!-- Image container - will be on bottom in desktop, top in mobile -->
+            <div
+              class="w-full lg:w-1/2 flex justify-center lg:justify-end order-1 lg:order-2 mb-8 lg:mb-0"
+            >
+              <img
+                src="images/pengantin-pria.jpg"
+                class="w-full max-w-[350px]"
+                alt="Pengantin Pria"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        class="min-h-screen w-full bg-[#686D76] flex justify-center items-center"
+      >
+        <div class="mx-4 lg:mx-[270px] py-10">
+          <!-- Container with responsive flex direction -->
+          <div
+            class="flex flex-col lg:flex-row items-center justify-between gap-8"
+          >
+            <!-- Text container - will be on top in desktop, below in mobile -->
+
+            <!-- Image container - will be on bottom in desktop, top in mobile -->
+            <div class="w-full lg:w-1/2 flex justify-center mb-8 lg:mb-0">
+              <img
+                src="images/pengantin-pria.jpg"
+                class="w-full max-w-[350px]"
+                alt="Pengantin Pria"
+              />
+            </div>
+            <div
+              class="w-full lg:w-1/2 text-center lg:text-left order-2 lg:order-1 lg:text-right"
+            >
+              <h1 class="border-b pb-2 raleway text-md">Pengantin Pria</h1>
+              <div class="mt-5">
+                <h1 class="text-8xl imperial-script-regular">Gagas</h1>
+                <h1 class="text-8xl imperial-script-regular -mt-8">Cahya</h1>
+                <p class="raleway text-sm mt-5">Putra dari Bapak Gagas</p>
+                <p class="raleway text-sm">dan Ibu Cahya</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div
+        class="bg-[#373A40] py-20 min-h-screen flex justify-center items-center"
+      >
+        <div class="text-center mx-10 lg:mx-[200px]">
+          <p class="text-sm lg:text-lg raleway leading-relaxed">
+            Dan orang-orang yang berkata: 'Ya Tuhan kami, anugerahkanlah kepada
+            kami pasangan kami dan keturunan kami sebagai penyejuk hati (kami),
+            dan jadikanlah kami imam bagi orang-orang yang bertakwa.
+
+            <span class="block mt-4 text-center font-semibold"
+              >(QS. Ar-Furqan: 74)</span
+            >
+          </p>
+        </div>
+      </div>
+      <div
+        class="bg-cover bg-center h-screen flex flex-col items-center relative"
+        style="background-image: url('images/countdown-background.jpg')"
+      >
+        <div class="absolute inset-0 bg-black/40"></div>
+        <div
+          class="flex flex-col items-center justify-center w-full h-full text-white relative z-20"
+        >
+          <div class="text-white text-4xl lg:text-8xl cinzel font-bold mb-8">
+            Countdown
+          </div>
+          <div class="flex justify-center items-center gap-8 mt-5">
+            <div class="text-center">
+              <div
+                id="days"
+                class="text-3xl lg:text-6xl raleway font-bold text-white"
+              >
+                0
+              </div>
+              <h1 class="text-white text-xl lg:text-2xl mt-4 raleway">Days</h1>
+            </div>
+            <div class="text-center">
+              <div
+                id="hours"
+                class="text-3xl lg:text-6xl raleway font-bold text-white"
+              >
+                0
+              </div>
+              <h1 class="text-white text-xl lg:text-2xl mt-4 raleway">Hours</h1>
+            </div>
+            <div class="text-center">
+              <div
+                id="minutes"
+                class="text-3xl lg:text-6xl raleway font-bold text-white"
+              >
+                0
+              </div>
+              <h1 class="text-white text-xl lg:text-2xl mt-4 raleway">
+                Minutes
+              </h1>
+            </div>
+            <div class="text-center">
+              <div
+                id="seconds"
+                class="text-3xl lg:text-6xl raleway font-bold text-white"
+              >
+                0
+              </div>
+              <h1 class="text-white text-xl lg:text-2xl mt-4 raleway">
+                Seconds
+              </h1>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- location -->
+      <div
+        class="bg-[#686D76] py-20 min-h-screen flex justify-center items-center"
+      >
+        <div></div>
+      </div>
+    </div>
+
+    <script src="js/script.js"></script>
+  </body>
+</html>
