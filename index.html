@@ -90,7 +90,7 @@
           >
             <!-- Text container - will be on top in desktop, below in mobile -->
             <div
-              class="w-full lg:w-1/2 text-center lg:text-left order-2 lg:order-1"
+              class="w-full lg:w-1/2 text-start lg:text-left order-2 lg:order-1"
             >
               <h1 class="border-b pb-2 raleway text-md">Pengantin Pria</h1>
               <div class="mt-5">
@@ -132,7 +132,7 @@
               />
             </div>
             <div
-              class="w-full lg:w-1/2 text-center lg:text-left order-2 lg:order-1 lg:text-right"
+              class="w-full lg:w-1/2 text-start lg:text-center lg:text-left order-2 lg:order-1 lg:text-right"
             >
               <h1 class="border-b pb-2 raleway text-md">Pengantin Pria</h1>
               <div class="mt-5">
@@ -146,37 +146,41 @@
         </div>
       </div>
 
-      <div
-        class="bg-[#373A40] py-20 min-h-screen flex justify-center items-center"
-      >
-        <div class="text-center mx-10 lg:mx-[200px]">
+      <!-- kata kata bijak -->
+      <div class="bg-[#373A40] flex justify-center items-center">
+        <div class="text-start mx-4 lg:mx-[200px] my-20">
+          <h2 class="font-bold my-4 cinzel text-2xl">QS. Ar-Furqan: 74</h2>
           <p class="text-sm lg:text-lg raleway leading-relaxed">
             Dan orang-orang yang berkata: 'Ya Tuhan kami, anugerahkanlah kepada
             kami pasangan kami dan keturunan kami sebagai penyejuk hati (kami),
             dan jadikanlah kami imam bagi orang-orang yang bertakwa.
-
-            <span class="block mt-4 text-center font-semibold"
-              >(QS. Ar-Furqan: 74)</span
-            >
           </p>
         </div>
       </div>
+
+      <!-- countdown (hitung mundur) -->
       <div
-        class="bg-cover bg-center h-screen flex flex-col items-center relative"
+        class="bg-cover bg-center h-[600px] flex flex-col items-center relative"
         style="background-image: url('images/countdown-background.jpg')"
       >
-        <div class="absolute inset-0 bg-black/40"></div>
+        <div class="absolute inset-0 bg-black/70"></div>
+        <div
+          class="absolute inset-x-0 top-0 h-32 bg-gradient-to-b from-[#373A40] via-[#373A40]/80 to-transparent"
+        ></div>
         <div
           class="flex flex-col items-center justify-center w-full h-full text-white relative z-20"
         >
-          <div class="text-white text-4xl lg:text-8xl cinzel font-bold mb-8">
+          <div class="text-white text-4xl lg:text-8xl cinzel font-bold">
             Countdown
           </div>
-          <div class="flex justify-center items-center gap-8 mt-5">
+          <div class="text-white text-4xl lg:text-8xl cinzel font-bold mb-8">
+            Timer
+          </div>
+          <div class="flex justify-center items-center gap-8 mt-3 lg:mt-5">
             <div class="text-center">
               <div
                 id="days"
-                class="text-3xl lg:text-6xl raleway font-bold text-white"
+                class="text-2xl lg:text-6xl raleway font-bold text-white"
               >
                 0
               </div>
@@ -185,7 +189,7 @@
             <div class="text-center">
               <div
                 id="hours"
-                class="text-3xl lg:text-6xl raleway font-bold text-white"
+                class="text-2xl lg:text-6xl raleway font-bold text-white"
               >
                 0
               </div>
@@ -194,7 +198,7 @@
             <div class="text-center">
               <div
                 id="minutes"
-                class="text-3xl lg:text-6xl raleway font-bold text-white"
+                class="text-2xl lg:text-6xl raleway font-bold text-white"
               >
                 0
               </div>
@@ -205,7 +209,7 @@
             <div class="text-center">
               <div
                 id="seconds"
-                class="text-3xl lg:text-6xl raleway font-bold text-white"
+                class="text-2xl lg:text-6xl raleway font-bold text-white"
               >
                 0
               </div>
@@ -215,13 +219,175 @@
             </div>
           </div>
         </div>
+        <div
+          class="absolute inset-x-0 bottom-0 h-32 bg-gradient-to-b from-transparent to-[#373A40]"
+        ></div>
       </div>
 
       <!-- location -->
       <div
-        class="bg-[#686D76] py-20 min-h-screen flex justify-center items-center"
+        class="bg-[#373A40] min-h-screen px-5 lg:px-[200px] flex flex-col text-start py-[100px]"
       >
-        <div></div>
+        <div>
+          <h1 class="cinzel text-lg lg:text-4xl">
+            Assalamu’alaikum Warahmatullahi Wabarakatuh
+          </h1>
+        </div>
+        <div>
+          <p class="raleway text-sm lg:text-lg mt-5">
+            Maha Suci Allah yang telah menciptakan makhluk-Nya
+            berpasang-pasangan. Dengan memohon rahmat dan ridha-Nya, kami
+            bermaksud menyampaikan kabar bahagia tentang pernikahan putra-putri
+            kami.
+          </p>
+        </div>
+        <div>
+          <h3 class="cinzel text-lg lg:text-xl my-5">
+            Nama Mempelai Pria & Nama Mempelai Wanita
+          </h3>
+        </div>
+        <div class="raleway my-3">
+          <h5 class="text-lg lg:text-xl font-semibold">
+            Insyaa Allah akan dilaksanakan pada
+          </h5>
+          <p>Sabtu, 17 Mei 2025</p>
+        </div>
+        <div class="raleway my-3">
+          <h5 class="text-lg font-semibold lg:text-xl">Tempat</h5>
+          <p>Gedung Serba Guna Al-Falah, Jl. Kenanga No. 10, Bandung</p>
+        </div>
+        <div>
+          <p class="raleway text-sm lg:text-lg mt-5">
+            Merupakan suatu kehormatan dan kebahagiaan bagi kami apabila
+            Bapak/Ibu/Saudara/i berkenan hadir untuk memberikan doa restu kepada
+            kedua mempelai. Semoga kehadiran dan doa restu Bapak/Ibu/Saudara/i
+            menjadi berkah bagi kami sekeluarga.
+          </p>
+        </div>
+        <div>
+          <h1 class="cinzel text-lg mt-5 lg:text-4xl">
+            Wassalamu’alaikum Warahmatullahi Wabarakatuh
+          </h1>
+        </div>
+      </div>
+
+      <!-- gallery -->
+      <div
+        class="bg-[#686D76] min-h-screen px-5 flex flex-col text-center py-5"
+      >
+        <div>
+          <h1 class="cinzel text-md font-bold lg:text-xl">Gallery Photo</h1>
+        </div>
+        <div class="my-4">
+          <h1 class="imperial-script-regular text-4xl lg:text-6xl">
+            Gagas & Someone
+          </h1>
+        </div>
+        <div class="grid grid-cols-2 lg:grid-cols-4 lg:mx-[200px] gap-4 mt-5">
+          <img src="images/gagas.jpg" alt="Gallery 1" class="w-full h-auto" />
+          <img src="images/gagas.jpg" alt="Gallery 2" class="w-full h-auto" />
+          <img src="images/gagas.jpg" alt="Gallery 1" class="w-full h-auto" />
+          <img src="images/gagas.jpg" alt="Gallery 2" class="w-full h-auto" />
+          <img src="images/gagas.jpg" alt="Gallery 1" class="w-full h-auto" />
+          <img src="images/gagas.jpg" alt="Gallery 2" class="w-full h-auto" />
+        </div>
+      </div>
+      <div class="bg-[#686D76] flex flex-col py-10">
+        <h1 class="cinzel font-bold text-md lg:text-2xl text-center mt-5">
+          Location
+        </h1>
+        <div class="my-10 lg:mx-[200px] mx-5">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7911.061777390676!2d112.25758816772253!3d-7.516922216853661!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e78153e8ae7e0d5%3A0xf9d38cc6e6379bfb!2sPule%2C%20Tj.%20Gn.%2C%20Kec.%20Peterongan%2C%20Kabupaten%20Jombang%2C%20Jawa%20Timur!5e0!3m2!1sid!2sid!4v1744375778393!5m2!1sid!2sid"
+            width="100%"
+            height="450"
+            style="border: 0"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+          ></iframe>
+        </div>
+        <div class="w-full flex justify-center items-center mt-10">
+          <a
+            href="https://maps.app.goo.gl/tTkAYUU74wAKM2Yf6"
+            class="py-2 px-3 border"
+            >PETUNJUK ARAH KE LOKASI</a
+          >
+        </div>
+      </div>
+
+      <!-- wedding gift -->
+      <div class="bg-[#373A40] flex flex-col py-10">
+        <div class="border m-8 lg:mx-[200px] p-8 rounded-lg">
+          <div>
+            <h1 class="text-3xl cinzel">Wedding Gift</h1>
+            <h4 class="text-xl mt-6 raleway font-semibold">
+              Send Wedding Gift Directly
+            </h4>
+          </div>
+          <div
+            class="bg-[#686D76] rounded-2xl my-8 shadow-lg p-6 flex flex-col items-start text-start"
+          >
+            <h2 class="text-xl font-semibold mb-2">QRIS</h2>
+
+            <img
+              src="https://yourdomain.com/path/to/qris.png"
+              alt="QRIS Code"
+              class="w-[70px] h-auto mx-auto object-cover rounded-md shadow"
+            />
+            <p class="mt-4 text-sm text-gray-500">
+              Atas nama:
+              <span class="font-medium text-gray-800">Nama Pemilik</span>
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="mx-auto bg-[#373A40] text-[#373A40] shadow-lg p-6">
+        <h2 class="text-2xl font-semibold text-center mb-4">
+          Konfirmasi Kehadiran
+        </h2>
+
+        <form id="rsvpForm" class="space-y-4">
+          <div>
+            <label for="name" class="block font-medium">Nama</label>
+            <input
+              type="text"
+              id="name"
+              required
+              class="w-full border border-gray-300 rounded-lg px-4 py-2 mt-1 focus:outline-none focus:ring-2 focus:ring-blue-500"
+            />
+          </div>
+
+          <div>
+            <label for="attendance" class="block font-medium"
+              >Apakah Anda akan hadir?</label
+            >
+            <select
+              id="attendance"
+              required
+              class="w-full border border-gray-300 rounded-lg px-4 py-2 mt-1"
+            >
+              <option value="">-- Pilih --</option>
+              <option value="Hadir">Hadir</option>
+              <option value="Tidak Hadir">Tidak Hadir</option>
+              <option value="Masih Ragu">Masih Ragu</option>
+            </select>
+          </div>
+
+          <button
+            type="submit"
+            class="w-full bg-blue-600 text-white rounded-lg py-2 font-semibold hover:bg-blue-700"
+          >
+            Kirim RSVP
+          </button>
+        </form>
+
+        <div id="rsvpResult" class="mt-6 hidden">
+          <h3 class="text-lg font-semibold mb-2 text-center">
+            Daftar Kehadiran
+          </h3>
+          <ul id="rsvpList" class="space-y-2"></ul>
+        </div>
       </div>
     </div>
 
