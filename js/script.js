@@ -43,49 +43,66 @@ function showRemaining() {
 
 timer = setInterval(showRemaining, 1000);
 
-const form = document.getElementById("rsvpForm");
-const resultDiv = document.getElementById("rsvpResult");
-const list = document.getElementById("rsvpList");
+// Replace existing RSVP code with this
+const SHEET_URL =
+  "https://script.google.com/macros/s/AKfycbziKQ3gbBUw-ZAtP_sGfCIX7MuVq8BvS-U7N2EKJHslMxzbOSPMUJkEsR2awdT2_n6-cw/exec";
+// Paste your URL here"
 
-// Load data dari localStorage saat halaman dibuka
-let rsvpData = JSON.parse(localStorage.getItem("rsvpList")) || [];
+async function loadRSVPs() {
+  try {
+    const response = await fetch(SHEET_URL);
+    const data = await response.json();
 
-function renderRSVP() {
-  list.innerHTML = "";
-  rsvpData.forEach((data, index) => {
-    const item = document.createElement("li");
-    item.className = "bg-white p-3 rounded-md shadow-sm";
-    item.innerHTML = `
-      <p class="font-semibold my-1"> ${data.nama}</p>
-      <p class="my-1"> ${data.message}.</p>
-      <p class="my-1"> ${data.kehadiran}</p>
-      <p class="text-sm text-gray-300">${data.waktu}</p>
-    `;
-    list.appendChild(item);
-  });
-  if (rsvpData.length > 0) {
-    resultDiv.classList.remove("hidden");
+    const list = document.getElementById("rsvpList");
+    const resultDiv = document.getElementById("rsvpResult");
+
+    list.innerHTML = "";
+    data.forEach((item) => {
+      const li = document.createElement("li");
+      li.className = "bg-white p-3 rounded-md shadow-sm";
+      li.innerHTML = `
+        <p class="font-semibold my-1">${item.nama}</p>
+        <p class="my-1">${item.message}</p>
+        <p class="my-1">${item.kehadiran}</p>
+        <p class="text-sm text-gray-300">${item.waktu}</p>
+      `;
+      list.appendChild(li);
+    });
+
+    if (data.length > 0) {
+      resultDiv.classList.remove("hidden");
+    }
+  } catch (error) {
+    console.error("Error:", error);
   }
 }
 
-form.addEventListener("submit", function (e) {
-  e.preventDefault();
-  const name = document.getElementById("name").value.trim();
-  const message = document.getElementById("message").value.trim();
-  const attendance = document.getElementById("attendance").value;
+document
+  .getElementById("rsvpForm")
+  .addEventListener("submit", async function (e) {
+    e.preventDefault();
 
-  const newData = {
-    nama: name,
-    kehadiran: attendance,
-    message: message,
-    waktu: new Date().toLocaleString(),
-  };
+    const formData = {
+      nama: document.getElementById("name").value.trim(),
+      message: document.getElementById("message").value.trim(),
+      kehadiran: document.getElementById("attendance").value,
+    };
 
-  rsvpData.push(newData);
-  localStorage.setItem("rsvpList", JSON.stringify(rsvpData));
-  renderRSVP();
-  form.reset();
-});
+    try {
+      await fetch(SHEET_URL, {
+        method: "POST",
+        body: JSON.stringify(formData),
+      });
 
-// Render saat pertama kali halaman dibuka
-renderRSVP();
+      this.reset();
+      loadRSVPs();
+    } catch (error) {
+      console.error("Error:", error);
+    }
+  });
+
+// Load RSVPs on page load
+document.addEventListener("DOMContentLoaded", loadRSVPs);
+
+// Refresh list every 30 seconds
+setInterval(loadRSVPs, 1000);
