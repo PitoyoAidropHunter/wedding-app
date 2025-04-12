@@ -54,11 +54,12 @@ function renderRSVP() {
   list.innerHTML = "";
   rsvpData.forEach((data, index) => {
     const item = document.createElement("li");
-    item.className = "bg-gray-100 p-3 rounded-md shadow-sm";
+    item.className = "bg-white p-3 rounded-md shadow-sm";
     item.innerHTML = `
-      <p><strong>Nama:</strong> ${data.nama}</p>
-      <p><strong>Kehadiran:</strong> ${data.kehadiran}</p>
-      <p class="text-sm text-gray-500">${data.waktu}</p>
+      <p class="font-semibold my-1"> ${data.nama}</p>
+      <p class="my-1"> ${data.message}.</p>
+      <p class="my-1"> ${data.kehadiran}</p>
+      <p class="text-sm text-gray-300">${data.waktu}</p>
     `;
     list.appendChild(item);
   });
@@ -70,11 +71,13 @@ function renderRSVP() {
 form.addEventListener("submit", function (e) {
   e.preventDefault();
   const name = document.getElementById("name").value.trim();
+  const message = document.getElementById("message").value.trim();
   const attendance = document.getElementById("attendance").value;
 
   const newData = {
     nama: name,
     kehadiran: attendance,
+    message: message,
     waktu: new Date().toLocaleString(),
   };
 
